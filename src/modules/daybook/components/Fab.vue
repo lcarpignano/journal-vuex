@@ -1,5 +1,8 @@
 <template>
-  <button class="btn btn-primary">
+  <button 
+  @click="$emit('update-entry')"
+  class="btn btn-primary"
+  >
     <i class="fa fa-2x" :class="icon"></i>
   </button>
 </template>

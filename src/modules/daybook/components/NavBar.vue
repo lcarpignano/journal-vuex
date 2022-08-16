@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar bg-primary">
-    <a class="navbar-brand text-white">
+    <a @click="toHome" class="navbar-brand text-white">
       <img
         src="../../../assets/logo.png"
         alt="Vue Logo"
@@ -18,8 +18,21 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    toHome() {
+      this.$router.push({ name: "daybook-no-entry" });
+    },
+  },
+};
 </script>
 
-<style>
+<style lang="scss" scoped>
+.navbar a {
+  cursor: default;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
 </style>
